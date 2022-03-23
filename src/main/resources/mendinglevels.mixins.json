@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "yes.mediumdifficulty.mendinglevels.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"refmap": "mendinglevels.refmap.json",
+	"mixins": [
+		"ExperienceOrbEntityMixin",
+		"MendingEnchantmentMixin"
+	],
+	"client": [
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
