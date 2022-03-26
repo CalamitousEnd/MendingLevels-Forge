@@ -15,7 +15,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 
 group = 'yes.mediumdifficulty.mendinglevels'
-version = '1.0.0'
+version = '1.1.1-1.15+'
 
 java {
 	archivesBaseName = "mendinglevels"
@@ -35,8 +35,6 @@ minecraft {
 	// Use non-default mappings at your own risk. They may not always work.
 	// Simply re-run your setup task after changing the mappings to update your workspace.
 	mappings channel: 'snapshot', version: '20210309-1.16.5'
-
-	accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
 	// Default run configurations.
 	// These can be tweaked, removed, or duplicated as needed.
@@ -167,7 +165,7 @@ jar {
 		attributes([
 				"Specification-Title"     : "mendinglevels",
 				//"Specification-Vendor": "mendinglevels authors",
-				"Specification-Version"   : "1.0.0", // We are version 1 of ourselves
+				"Specification-Version"   : "1.1.1-1.15+", // We are version 1 of ourselves
 				"Implementation-Title"    : project.name,
 				"Implementation-Version"  : project.jar.archiveVersion,
 				//"Implementation-Vendor": "mendinglevels authors",
