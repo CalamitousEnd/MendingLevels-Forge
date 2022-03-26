@@ -1,0 +1,27 @@
+modLoader="javafml" #mandatory
+loaderVersion="[31,)"
+license="LGPL-3.0"
+[[mods]] #mandatory
+modId="mendinglevels" #mandatory
+version="1.1.1"
+issueTrackerURL=""
+displayName="Mending Levels" #mandatory
+logoFile="icon.png"
+authors="MediumDifficulty, Calamitous_End" #optional
+credits="MediumDifficulty"
+description='''
+"Adds enchantment level support for the mending enchantment"
+'''
+[[dependencies.mendinglevels]] #optional
+# the modid of the dependency
+modId="forge" #mandatory
+mandatory=true #mandatory
+versionRange="[31,)" #mandatory
+ordering="NONE"
+side="BOTH"
+[[dependencies.mendinglevels]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.15,)"
+ordering="NONE"
+side="BOTH"
