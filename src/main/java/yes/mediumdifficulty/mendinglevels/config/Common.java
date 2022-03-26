@@ -1,18 +1,27 @@
 package yes.mediumdifficulty.mendinglevels.config;
 
 
+import net.minecraft.enchantment.Enchantment;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public class Common {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static final ForgeConfigSpec SPEC;
 
-    public static final ForgeConfigSpec.ConfigValue<Integer> MAX_LEVEL;
+    public static final ForgeConfigSpec.ConfigValue<Integer> MaxLevel;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> IsTreasure;
+    public static final ForgeConfigSpec.EnumValue<Enchantment.Rarity> Rarity;
+    public static final ForgeConfigSpec.ConfigValue<Integer> XpLvlsPerLvl;
+    public static final ForgeConfigSpec.ConfigValue<Integer> MinTableLvl;
 
     static {
-        BUILDER.push("Config");
+        BUILDER.push("CONFIG");
 
-        MAX_LEVEL = BUILDER.comment("The maximum mending level\n(you can effectively disable the mod by setting it to 1, but I have no idea why you would do that seen as you've downloaded this mod to change the max value)").define("max_level", 5);
+        MaxLevel = BUILDER.comment("The maximum mending level").define("max_level", 5);
+        IsTreasure = BUILDER.comment("If the mending enchantment is treasure (true = can't be in enchanting table)").define("is_treasure", false);
+        Rarity = BUILDER.comment("Rarity of the mending enchantment").defineEnum("rarity", Enchantment.Rarity.VERY_RARE);
+        XpLvlsPerLvl = BUILDER.comment("How many experience levels are required per mending level.").define("exp_levels_per_level", 2);
+        MinTableLvl = BUILDER.comment("The minimum enchantment table level required for mending to appear").define("min_table_lvl", 20);
 
         BUILDER.pop();
         SPEC = BUILDER.build();
