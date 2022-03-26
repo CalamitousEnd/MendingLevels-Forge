@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: MendingLevels_FORGE
-MixinConfigs: mendinglevels.mixins.json
-Implementation-Version: 1.0.1
-Specification-Title: mendinglevels
-Implementation-Timestamp: 2022-03-22T21:24:19-0400
-Specification-Version: 1.0.1
-
