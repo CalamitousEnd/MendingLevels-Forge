@@ -20,11 +20,12 @@ public class MendingEnchantmentMixin {
     }
     /**
      * @author Calamitous_End
-     * @reason fix mending not appearing up in enchantment table.
+     * @reason fixed equation...again.
      */
     @Overwrite
     public int getMinCost(final int level) {
-        return Math.max(30-Common.XpLvlsPerLvl.get()+(level - 1),Common.MinTableLvl.get());
+        int minXpLevel = Math.max(30-Common.XpLvlsPerLvl.get()+(level-1),Common.MinTableLvl.get());
+        return minXpLevel + Common.XpLvlsPerLvl.get()*(level-1);
     }
     /**
      * @author Calamitous_End
